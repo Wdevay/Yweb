@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            align-items: stretch;
+        }
+        .container {
+            display: flex;
+            background-image: url("./img/back.jpg");
+        }
+
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            position: sticky;
+            top: 0;
+            display: flex;
+        }
+        header span {
+            padding-left: 50rem;
+            margin-top: 0.5rem;
+        }
+
+        #logo {
+            border-radius: 15px;
+            
+        }
+        .auth {
+            border-radius: 15px;
+            max-width: 350px;
+            max-height: 350px;
+            border: 1px solid rgb(47, 51, 54);
+            top: 80px;
+            position: sticky;
+            display: flex;
+            flex-direction:column;
+            box-sizing: border-box;
+        }
+        .boutons {
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+        }
+
+        .inscription {
+            color: #ffffff;
+        }
+        .inscription h3{    
+            margin-left: 12px;
+        }
+        .inscription p{
+            color :rgb(122, 122, 122);
+            font-size: 13px;
+            line-height: 16px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        
+        .btn-txt {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000000;
+            text-decoration: none;
+            line-height: 40px;
+        }
+
+        .btn-ggl {
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            height: 40px;
+            width: 300px;
+            border-radius: 9999px;
+            text-align: center;
+        }
+
+        .btn-apple {
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            height: 40px;
+            width: 300px;
+            border-radius: 9999px;
+            text-align: center;
+        }
+        .btn-acc {
+            background-color: #ffffff;
+            height: 40px;
+            width: 300px;
+            border-radius: 9999px;
+            text-align: center;
+        }
+        .cgu {
+            color :rgb(122, 122, 122);
+            font-size: 13px;
+            padding-left: 12px;
+            padding-right: 12px;
+            margin-bottom: 16px;
+        }
+
+        #posts-container {
+            max-width: 600px;
+            margin: 10px 40px auto 630px;
+        }
+
+        .post {
+            background-color: #ffffff;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .post:hover {
+            box-shadow: 0 8px 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            line-height: 1.5rem;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .post-content {
+            color: #14171a;
+            line-height: 1.5;
+        }
+
+        .post-comment-nb {
+            color: #616161;
+            line-height: 0.5;
+            font-size: smaller;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e1e8ed;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="#"><img id="logo" src="./img/logoY.jpg" alt="LogoY" width="50px"></a>
+        </div>
+        <span>Mieux que X</span>
+    </header>
+
+    <div class="container">
+        <div id="posts-container">
+
+            <template id="posts-tpl">
+                <div class="post">
+                    <div class="post-header">
+                    <img class="avatar" src="https://ui-avatars.com/api/?name=Antoine+Bonin&background=random" alt="Avatar">
+                        <div>
+                            <h2>Je suis un titre de post</h2>
+                            <p>@AntoineBonin</p>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ab incidunt aperiam blanditiis, odit voluptas porro numquam temporibus, rem saepe error doloribus accusantium quod voluptatibus ea explicabo maxime corporis in?</p>
+                    </div>
+                    <hr>
+                    <p class="post-comment-nb">50 commentaire(s)</p>
+                </div> 
+            </template>
+        </div>
+
+        <div class="auth">
+            <div class="inscription">
+                <h3>Novice sur Y?</h3>
+                <p>Inscrivez-vous pour profiter de votre propre fil presonnalisé !</p>
+            </div>
+            <div class="boutons">
+                <div class="btn-ggl">
+                    <div>
+                        <a href="#" class="btn-txt">
+                            S'inscrire avec Google
+                        </a>
+                    </div>
+                </div>
+                <div class="btn-apple">
+                    <div>
+                        <a href="#" class="btn-txt">
+                            S'inscrire avec Apple
+                        </a>
+                    </div>
+                </div>
+                <div class="btn-acc">
+                    <div>
+                        <a href="#" class="btn-txt">
+                            Créer un compte
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cgu">
+                <p>En vous inscrivant, vous acceptez les <a href="#"><span>Conditions d'utilisation</span></a> et la <a href="#">Politique de confidentialité</a>, notamment l'<a href="#">Utilisation des cookies</a>. </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+</body>
+</html>
