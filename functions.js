@@ -37,3 +37,13 @@ export async function getCommentLength(posts) {
         return nbcoms
 }
 
+export async function getCommentsbyPostId(posts) {
+    const coms ={}
+    for (let index = 0; index < posts.length; index++) {
+        const post = posts[index];
+        const reponse = await fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
+        const data = await reponse.json()
+        coms[post.id]=data
+        }
+        return coms
+}
