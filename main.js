@@ -26,8 +26,6 @@ async function main(){
 
 
 
-
-
     const divpost = document.getElementById('posts-container')
     const template = document.getElementById('posts-tpl')
     posts.forEach(element => {
